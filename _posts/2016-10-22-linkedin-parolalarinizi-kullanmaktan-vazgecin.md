@@ -10,7 +10,7 @@ img: post/linkedin.jpg
 ---
 Geçtiğimiz yıl Linkedin veritabanı hacklenmiş ve bu veritabanı uzunca bir süre torrent aracılığıyla elden ele dolaşmıştı. Uzunca bir süre bu olay gerek sosyal medya gerek teknoloji forumlarında konuşulmuş ve zamanla unutulmuştu. Ancak geçtiğimiz aylarda Microsoft’un Linkedin’i satın aldığını duyurması üzerine bu meşhur veritabanı tekrardan torrent paylaşımlarında boy göstermeye başladı. Bu ele geçirme ile birlikte yaklaşık olarak milyonlarca kullanıcının e-mail ve linkedin hesap bilgilerinin yanısıra parolaları da rahatlıkla erişilebilir bir formatta yine rahatlıkla erişilebilir noktalarda bulunuyor. Ortaya çıktığı dönemde Linkedin’e ait olduğu iddia edilen ve milyonlarca kullanıcının bilgisini içeren veritabanı dark web üzerinden 5 Bitcoin karşılığında satışa sunulmuştu.
 
-![Linkedin DB İlanı]({{ site.baseurl }}/assets/img/post/linkedin-db-for-sale.png "Linkedin DB İlanı")
+![Linkedin DB İlanı]({{ site.baseurl }}/assets/images/post/linkedin-db-for-sale.png "Linkedin DB İlanı")
 
 Ele geçirilen veritabanında Linkedin kullanıcılarının -en önemli olarak- e-mail ve parola bilgileri yer alıyordu. Parolalar şifrelenmemiş bir şekilde tutulmasa da, parolaların salt kullanılmadan ham bir şekilde SHA1 algoritması ile hashlenerek tutulduğu anlaşılınca parolaların %90’ı 72 saat içerisinde çözülmüştü.
 

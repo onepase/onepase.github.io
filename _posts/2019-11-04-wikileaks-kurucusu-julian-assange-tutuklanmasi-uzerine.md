@@ -10,7 +10,7 @@ img: post/julian-assange.jpg
 ---
 Wikileaks kurucusu Julian Assange, Londra’daki Ekvador Büyükelçiliğinde tutuklandı. Hakkında gerçekleştirilen suçlamalar sonucunda açılan dava sebebiyle, İsveç’e iade edilmesini önlemek için sığındığı Ekvador Büyükelçiliğine sığınmasının üzerinden yedi yıl geçtikten sonra, bugün Ekvador hükümeti tarafından siyasi sığınması geri çekildi ve hemen ardından Julian Assange Londra Polisi tarafından tutuklandı.
 
-![Julian Assange]({{ site.baseurl }}/assets/img/post/julian-assange-tutuklanma.jpg "Julian Assange")
+![Julian Assange]({{ site.baseurl }}/assets/images/post/julian-assange-tutuklanma.jpg "Julian Assange")
 
 
 Tutuklamanın ardından Ekvador devlet başkanı Lenín Moreno paylaştığı tweet ile “Julian Assange’ın sığınma durumu, uluslararası sözleşmelere ve günlük yaşam protokollerine yönelik tekrarlanan ihlallerden sonra geri çekildi” ifadelerini kullandı.
@@ -21,7 +21,7 @@ Assange, İngiliz polisi tarafından Ağustos 2012’de Westminster Mahkemesine 
 
 İsveç, Assange’a karşı 2017 yılında başlatılan cinsel saldırı suçlamasıyla ilgili soruşturmayı bırakmış olmasına rağmen, Assange ABD’ye iade edilme korkusuyla Ekvador Büyükelçiliğinde sığınmacı olarak kalmayı seçmişti.
 
-![Julian Assange]({{ site.baseurl }}/assets/img/post/julian-assange-2.jpg "Julian Assange")
+![Julian Assange]({{ site.baseurl }}/assets/images/post/julian-assange-2.jpg "Julian Assange")
 
 Julian Assange ABD’de Wikileaks aracılığıyla diplomatik ve askeri belgeleri sızdırdığı iddiasıyla federal suçlamalarla da karşı karşıya. Ancak ABD Assange aleyhindeki suçlamalarla ilgili bugüne kadar resmi olarak bir adım atmadı.
 
