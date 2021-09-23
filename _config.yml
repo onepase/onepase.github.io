@@ -1,10 +1,10 @@
 # Site settings
-site: Ephesus
-title: Ephesus Blog
-keywords: ephesus, blog
+site: Hakan Torun
+title: Hakan Torun
+keywords: hakan torun, blog
 description: >-
   Hakan Torun Personal Blog
-lang: en-US
+lang: tr-TR
 timezone:  Europe/Istanbul
 repo: https://github.com/onepase/Ephesus # site repo [optional]
 google_verify:      Q4Ewp22lX-DiRoBVzVVP13l6lh2oxChSmpGfBP0SPj8 # Put your Google Verification here
@@ -25,7 +25,7 @@ author:
 
 
 # URL settings
-url: "http://127.0.0.1:4000" # Domain Name of host. [username].github.io for github pages
+url: "https://hakan.io" # Domain Name of host. [username].github.io for github pages
 baseurl: "" # sub folder for jekyll site. only if jekyll site not in root of host. leave blank if not wishd. always add / in front.
 permalink: pretty
 
