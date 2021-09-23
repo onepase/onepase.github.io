@@ -25,7 +25,7 @@ shred -uzfv -n 20 ornekdosya.txt
 
 Yukarıdaki komut ile ornekdosya.txt dosyasının disk üzerindeki alanına 20 kez rastgele veri yazılır ve 21.kez tüm dosya alanı 0 ile doldurulur. Dosya ismi defalarca değiştirilir ve sonucunda güvenli bir şekilde dosya silme işlemi gerçekleşmiş olur.
 
-![Linux Shred]({{ site.baseurl }}/assets/img/post/linux-shred-dosya-silme.png "Linux Shred")
+![Linux Shred]({{ site.baseurl }}/assets/images/post/linux-shred-dosya-silme.png "Linux Shred")
 
 **OsX Kullanıcıları**
 
