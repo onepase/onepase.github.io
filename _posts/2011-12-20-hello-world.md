@@ -12,7 +12,7 @@ tags:
 ---
 &#8220;Erica Albright is a bitch&#8221; diye başlayan bir blog yazmak isterdim ama ne Erica diye bir kız arkadaşım var ne de şu anda kadınları çiftlik hayvanları ile karşılaştırma fikrine sahibim.
 
-![The Social Network Zuckonit]({{ site.baseurl }}/assets/images/post/the-social-network-zuckonit.png "The Social Network Zuckonit")
+![The Social Network Zuckonit]({{ site.baseurl }}/assets/images/post/the-social-network-zuckonit.png "The Social Network Zuckonit")*The Social Network filminden bir kare*
 
 Bu ilk yazım, Dennis Ritchie&#8217;nin &#8220;The C Programming Language&#8221; de tanımladığı ilk C programı için kullandığı tabir olan;
 
