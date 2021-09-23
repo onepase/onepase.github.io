@@ -18,8 +18,8 @@ Duygu tespit ve analizi çalışma alanlarında, anlık olarak görüntü işlem
 
 MIT araştırmacıları, benzer teknolojiyi kullanan sistemlerle;
 
-– Film yapımcıları ve reklamcılarının oyuncu tepkilerinin gerçek zamanlı olarak takip edilmesi ve iyileştirilmesinde
-– Depresyon veya bipolar bozuklukların tanısında
-– Akıllı ev sistemlerinde, ev sıcaklığı, aydınlatması ve otomatik müzik seçiminde etkin olarak kullanabileceğini belirtti.
+- Film yapımcıları ve reklamcılarının oyuncu tepkilerinin gerçek zamanlı olarak takip edilmesi ve iyileştirilmesinde
+- Depresyon veya bipolar bozuklukların tanısında
+- Akıllı ev sistemlerinde, ev sıcaklığı, aydınlatması ve otomatik müzik seçiminde etkin olarak kullanabileceğini belirtti.
 
 İlgili araştırmaya [bu adresten](http://eqradio.csail.mit.edu/files/eqradio-paper.pdf) ulaşabilirsiniz.
