@@ -15,7 +15,7 @@ Hurdaya ayrılmış bilgisayarlar üzerinde bile rahatça çalışabilen Menue
 
 Şimdi gelelim MenuetOS'u bilgisayarınızda nasıl deneyeceğinize. Bizzat denedim ve MenuetOS u eski birbilgisayarda çalıştırmayı başardım.
 
-<img class="alignnone" src="http://www.menuetos.net/086c.png" alt="" width="450" />
+![Linux Shred]({{ site.baseurl }}/assets/images/post/menuetos-desktop.png "Linux Shred")
 
 MenuetOS işletim sistemleri içinde şüphesiz en basit arayüzle kullanıcılarını bekleyen ve diğer işletim sistemleri gibi karmaşık olmayan altayapısı Assembly ile oluşturulmuş bir işletim sistemi.
 
@@ -24,4 +24,4 @@ MenuetOS tek bir diskete sığacak boyutta ve kullanımı oldukça kolay.Tek yap
 
 Daha sonra kullanmak istediğiniz bilgisayarın disket bölümüne takıp bilgisayarı yeniden başlatmak ve BIOS menüsünden (F2,F5,DEL tuşuyla BIOS menusune girebilirsiniz) boot seçeneğini disket sürücüsü seçmek. Bu işlemleri yaptıktan sonra bilgisayarınızı yeniden başlatınca bilgisayar disket üzerinden başlatılıyor ve bilgisayarınızda kurulu olan diğer işletim sistemine (Windows,Linux,MacOS gibi) hiçbir zarar vermiyor.
 
-<img class="alignnone" src="http://www.menuetos.net/082a.png" alt="" width="450" />
+![Linux Shred]({{ site.baseurl }}/assets/images/post/menuetos-quake.png "Linux Shred")
