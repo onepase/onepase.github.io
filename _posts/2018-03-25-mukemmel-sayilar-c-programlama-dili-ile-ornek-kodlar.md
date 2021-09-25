@@ -7,6 +7,7 @@ permalink: /mukemmel-sayilar-c-programlama-dili-ile-ornek-kodlar/
 categories: Genel
 tags: [mükemmel sayı, mükemmel sayılar, c ile mükemmel sayı, c programlama mükemmel sayılar, mükemmel sayılar örnek kod, mükemmel sayı fonksiyon]
 img: numbers.jpg
+mathjax: true
 ---
 
 Mükemmel sayılar, kendisi hariç pozitif tam bölenlerinin toplamına eşit olan sayılardır. En küçük mükemmel sayı 6'dır.
