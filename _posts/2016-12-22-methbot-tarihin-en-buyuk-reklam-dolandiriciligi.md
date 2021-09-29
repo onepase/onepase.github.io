@@ -6,6 +6,7 @@ layout: post
 permalink: /methbot-tarihin-en-buyuk-reklam-dolandiriciligi/
 categories: Genel
 tags: [methbot]
+image: assets/images/methbot.png
 ---
 
 ![Methbot]({{ site.baseurl }}/assets/images/post/methbot.png "Methbot")
