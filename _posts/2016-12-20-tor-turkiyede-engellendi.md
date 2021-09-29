@@ -1,5 +1,5 @@
 ---
-title: 'TOR Türkiye\'de Engellendi'
+title: TOR Türkiye'de Engellendi
 date: 2016-12-20T09:30:00+00:00
 author: Hakan
 layout: post
