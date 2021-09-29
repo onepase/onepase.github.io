@@ -17,7 +17,7 @@
 		<meta property="og:url" content="{{ site.url }}{{ site.baseurl }}{{page.url}}"/>
 		<meta property="og:title" content="{% if page.title %}{{page.title}} - {{site.title}}{% else %}{{site.title}}{% endif %}" />
 		<meta property="og:description" content="{% if page.description %}{{page.description}} {% else %}{{site.description}}{% endif %}" />
-		<meta property="og:image" content="{% if page.image %}{{page.image}}{% else %}{{ site.url }}{{ site.baseurl }}assets/images/favicon.png{% endif %}"/>
+		<meta property="og:image" content="{{ site.url }}{{ site.baseurl }}{% if page.image %}{{page.image}}{% else %}assets/images/favicon.png{% endif %}"/>
 		<meta name="twitter:card" content="summary"/>
 		<meta property="twitter:title" content="{% if page.title %}{{page.title}} - {{site.title}}{% else %}{{site.title}}{% endif %}" />
 		<meta property="twitter:description" content="{% if page.description %}{{page.description}} {% else %}{{site.description}}{% endif %}" />
