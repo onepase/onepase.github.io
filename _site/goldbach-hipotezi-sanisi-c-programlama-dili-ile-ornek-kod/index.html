@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="tr-TR" data-theme="light">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0,viewport-fit=cover">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<title>Goldbach Hipotezi / Sanısı - C Programlama Dili İle Örnek Kod - Hakan Torun</title>
+		<meta name="description" content="Hakan Torun Kişisel Blog Sitesi. Bilgisayar mühendisliği, yazılım geliştirme, siber güvenlik ve çeşitli konularda blog gönderilerine erişebilirsiniz.">
+		<meta name="keywords" content="goldbach hipotezigoldbach sanısıasal sayılarc programlamac örnek">
+		<base href="https://hakan.io" />
+		
+    	<meta content="2019-01-12T03:00:00+03:00" property="article:published_time">
+    	<meta content="https://hakan.io/about/" property="article:author">
+  		
+		<meta property="og:site_name" content="Hakan Torun">
+		<meta property="og:type" content="article" />
+		<meta property="og:url" content="https://hakan.io/goldbach-hipotezi-sanisi-c-programlama-dili-ile-ornek-kod/"/>
+		<meta property="og:title" content="Goldbach Hipotezi / Sanısı - C Programlama Dili İle Örnek Kod - Hakan Torun" />
+		<meta property="og:description" content="Hakan Torun Kişisel Blog Sitesi. Bilgisayar mühendisliği, yazılım geliştirme, siber güvenlik ve çeşitli konularda blog gönderilerine erişebilirsiniz." />
+		<meta property="og:image" content="https://hakan.io/assets/images/favicon.png"/>
+		<meta name="twitter:card" content="summary"/>
+		<meta property="twitter:title" content="Goldbach Hipotezi / Sanısı - C Programlama Dili İle Örnek Kod - Hakan Torun" />
+		<meta property="twitter:description" content="Hakan Torun Kişisel Blog Sitesi. Bilgisayar mühendisliği, yazılım geliştirme, siber güvenlik ve çeşitli konularda blog gönderilerine erişebilirsiniz." />
+		<meta property="twitter:image" content="https://hakan.io/assets/images/favicon.png" />
+		<link rel="stylesheet" href="assets/css/highlight.css">
+		<link rel="stylesheet" href="assets/css/style.css">
+		<link rel="shortcut icon" href="assets/images/favicon.png" />
+		<link rel="alternate" type="application/atom+xml" title="Hakan Torun" href="https://hakan.io/atom.xml">
+		<link rel="alternate" type="application/json" title="Hakan Torun" href="https://hakan.io/feed.json" />
+		<link rel="sitemap" type="application/xml" title="sitemap" href="https://hakan.io/sitemap.xml" />
+		<meta name="google-site-verification" content="Q4Ewp22lX-DiRoBVzVVP13l6lh2oxChSmpGfBP0SPj8" />
+	</head>
+<body>
+<div class="container">
+	<div class="profile">
+		<a href="https://hakan.io"><img src="assets/images/hakan-torun.jpg" class="profile-image"></a>
+		<div class="profile-about">
+			<h2 style="margin-bottom: 0; font-weight: 700;">Hakan Torun</h2>
+			
+				<a href="https://facebook.com/onepase" target="_blank"><img src="assets/images/icon/facebook.svg" class="social-icon"></a>
+			
+			<a href="https://twitter.com/onepase" target="_blank"><img src="assets/images/icon/twitter.svg" class="social-icon"></a>
+			<a href="https://instagram.com/onepase" target="_blank"><img src="assets/images/icon/instagram.svg" class="social-icon"></a>
+			<a href="https://youtube.com/onepase" target="_blank"><img src="assets/images/icon/youtube.svg" class="social-icon"></a>
+			<a href="https://github.com/onepase" target="_blank"><img src="assets/images/icon/github.svg" class="social-icon"></a>
+			<a href="about"><img src="assets/images/icon/me.svg" class="social-icon"></a>
+			<br>
+			Computer Engineer @pardinus <br> Founder @zaqa <br> Open Source /#linux
+			<br>
+			<div class="mode" id="mode-switcher" onclick="toggleNightMode();">
+				<span></span>
+			</div>
+		</div>
+	</div>
+	
+<script type="text/javascript"
+    src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+<div class="post-header">
+	<div class="post-date">12.01.2019</div>
+	<div class="post-share">
+		Share:&nbsp; 
+		<a href="https://www.facebook.com/sharer/sharer.php?u=https://hakan.io/goldbach-hipotezi-c-programlama-dili-ile-ornek-kod" target="_blank"><img src="assets/images/icon/facebook.svg" class="social-icon"></a>
+		<a href="https://twitter.com/intent/tweet?source=tweetbutton&amp;original_referer=https://hakan.io/goldbach-hipotezi-c-programlama-dili-ile-ornek-kod&amp;text=Goldbach Hipotezi / Sanısı - C Programlama Dili İle Örnek Kod - https://hakan.io/goldbach-hipotezi-c-programlama-dili-ile-ornek-kod" target="_blank"><img src="assets/images/icon/twitter.svg" class="social-icon"></a>
+		<a href="https://api.whatsapp.com/send?text=https://hakan.io/goldbach-hipotezi-c-programlama-dili-ile-ornek-kod" target="_blank"><img src="assets/images/icon/whatsapp.svg" class="social-icon"></a>
+	</div>
+</div>
+
+<div class="blog-post-content">
+	<h1>Goldbach Hipotezi / Sanısı - C Programlama Dili İle Örnek Kod</h1>
+	<p>Goldbach hipotezi veya sanısı, 2’den büyük her çift tam sayının iki asal sayının toplamı şeklinde yazılabileceği iddiasıdır. İspatlanamamış en büyük matematik problemlerinden biridir. Orijinal Goldbach hipotezinde, Goldbach; 2’den büyük her tamsayının 3 asal sayının toplamı şeklinde ifade edilebileceğini iddia eder. 1 sayısının da asal sayı olduğu düşünülerek bu iddia ortaya atılmıştır. Sonrasında 1 asal sayı olarak kabul edilmediği için bu iddia geçerliliğini yitirmiştir. Goldbach hipotezi veya sanısı olarak ele aldığımız bu iddia, Euler’in “2’den büyük her çift tam sayı, iki asal sayının toplamından bulunabilir” şeklindeki düzeltmesini kapsamaktadır.</p>
+
+<p>Örnek olarak; 4,6,8,10,12 çift tam sayıları şu şekilde iki asal sayının toplamı şeklinde yazılabilir.</p>
+
+<p>4 = 2 + 2
+6 = 3 + 3
+8 = 3 + 5
+10 = 3 + 7
+12 = 5 + 7</p>
+
+<p>2’den büyük bir çift tam sayının, iki asal sayının toplamı şeklinde yazılmasının çözüm kümesinde en küçük asal sayıyı içeren ayrışımı bulabilecek örnek bir C kodu şu şekilde olacaktır.</p>
+
+<p>Örnek C Kodu</p>
+
+<figure class="highlight"><pre><code class="language-c" data-lang="c"><span class="cp">#include &lt;stdio.h&gt;
+</span>
+<span class="c1">//Fonksyion deklarasyonları</span>
+<span class="kt">int</span> <span class="nf">is_prime</span><span class="p">(</span><span class="kt">int</span> <span class="n">n</span><span class="p">);</span>
+<span class="kt">void</span> <span class="nf">goldbach</span><span class="p">(</span><span class="kt">int</span> <span class="n">g</span><span class="p">);</span>
+
+<span class="kt">int</span> <span class="nf">main</span><span class="p">(){</span>
+	<span class="kt">int</span> <span class="n">number</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+	<span class="k">while</span><span class="p">(</span><span class="mi">1</span><span class="p">){</span>
+		<span class="n">printf</span><span class="p">(</span><span class="s">"Enter even number:"</span><span class="p">);</span>
+		<span class="n">scanf</span><span class="p">(</span><span class="s">"%d"</span><span class="p">,</span><span class="o">&amp;</span><span class="n">number</span><span class="p">);</span>
+		<span class="k">if</span><span class="p">(</span><span class="n">number</span><span class="o">&gt;</span><span class="mi">2</span> <span class="o">&amp;&amp;</span> <span class="n">number</span><span class="o">%</span><span class="mi">2</span><span class="o">==</span><span class="mi">0</span><span class="p">){</span>
+			<span class="n">goldbach</span><span class="p">(</span><span class="n">number</span><span class="p">);</span>
+		<span class="p">}</span>
+		<span class="k">else</span><span class="p">{</span>
+			<span class="n">printf</span><span class="p">(</span><span class="s">"Incorrect number!</span><span class="se">\n</span><span class="s">"</span><span class="p">);</span>
+		<span class="p">}</span>
+		<span class="n">printf</span><span class="p">(</span><span class="s">"</span><span class="se">\n</span><span class="s">"</span><span class="p">);</span>
+	<span class="p">}</span>
+	<span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+
+
+<span class="c1">//Asal sayı kontrolu j &lt; n/2, bir sayinin yarisindan buyuk tam boleni olamaz</span>
+<span class="kt">int</span> <span class="nf">is_prime</span><span class="p">(</span><span class="kt">int</span> <span class="n">n</span><span class="p">){</span>
+	<span class="kt">int</span> <span class="n">flag</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+	<span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">j</span> <span class="o">=</span> <span class="mi">2</span><span class="p">;</span> <span class="n">j</span> <span class="o">&lt;</span> <span class="n">n</span><span class="o">/</span><span class="mi">2</span><span class="p">;</span> <span class="n">j</span><span class="o">++</span><span class="p">)</span>
+	<span class="p">{</span>
+		<span class="k">if</span><span class="p">((</span><span class="n">n</span><span class="o">%</span><span class="n">j</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span><span class="p">){</span>
+			<span class="k">return</span> <span class="n">flag</span><span class="o">-</span><span class="mi">1</span><span class="p">;</span>
+		<span class="p">}</span>
+	<span class="p">}</span>
+	<span class="k">return</span> <span class="n">flag</span><span class="p">;</span>
+<span class="p">}</span>
+
+
+<span class="c1">//Iki'den buyuk bir cift tam sayinin min goldbach cozumu</span>
+<span class="kt">void</span> <span class="nf">goldbach</span><span class="p">(</span><span class="kt">int</span> <span class="n">g</span><span class="p">){</span>
+	<span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">2</span><span class="p">;</span>
+
+	<span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">j</span> <span class="o">=</span> <span class="n">g</span><span class="o">-</span><span class="n">i</span><span class="p">;</span> <span class="n">j</span> <span class="o">&gt;</span> <span class="mi">2</span><span class="p">;</span> <span class="n">j</span><span class="o">--</span><span class="p">)</span>
+	<span class="p">{</span>
+		<span class="k">if</span><span class="p">(</span><span class="n">is_prime</span><span class="p">(</span><span class="n">i</span><span class="p">)</span> <span class="o">==</span> <span class="mi">1</span> <span class="o">&amp;&amp;</span> <span class="n">is_prime</span><span class="p">(</span><span class="n">j</span><span class="p">)</span> <span class="o">==</span> <span class="mi">1</span><span class="p">)</span>
+		<span class="p">{</span>
+			<span class="n">printf</span><span class="p">(</span><span class="s">"%d = %d + %d</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span><span class="n">g</span><span class="p">,</span><span class="n">i</span><span class="p">,</span><span class="n">j</span><span class="p">);</span>
+			<span class="k">break</span><span class="p">;</span>
+		<span class="p">}</span>
+		<span class="n">i</span><span class="o">++</span><span class="p">;</span>
+	<span class="p">}</span>
+<span class="p">}</span></code></pre></figure>
+
+<p>2’den büyük bir çift tam sayının, iki farklı asal sayının toplamı şeklindeki tüm çözüm kümesini ekrana yazan örnek bir C kodu ise şu şekilde olacaktır.</p>
+
+<figure class="highlight"><pre><code class="language-c" data-lang="c"><span class="cp">#include &lt;stdio.h&gt;
+</span>
+<span class="c1">//Asal sayilar icin tampon</span>
+<span class="kt">int</span> <span class="n">primes</span><span class="p">[</span><span class="mi">100000</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span><span class="mi">2</span><span class="p">};</span>
+<span class="kt">int</span> <span class="n">j</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+
+<span class="c1">//Fonksyion deklarasyonları</span>
+<span class="kt">int</span> <span class="nf">is_prime</span><span class="p">(</span><span class="kt">int</span> <span class="n">n</span><span class="p">);</span>
+<span class="kt">void</span> <span class="nf">goldbach</span><span class="p">(</span><span class="kt">int</span> <span class="n">g</span><span class="p">);</span>
+
+<span class="kt">int</span> <span class="nf">main</span><span class="p">(){</span>
+	<span class="kt">int</span> <span class="n">number</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+	<span class="k">while</span><span class="p">(</span><span class="mi">1</span><span class="p">){</span>
+		<span class="n">printf</span><span class="p">(</span><span class="s">"Enter even number:"</span><span class="p">);</span>
+		<span class="n">scanf</span><span class="p">(</span><span class="s">"%d"</span><span class="p">,</span><span class="o">&amp;</span><span class="n">number</span><span class="p">);</span>
+		<span class="k">if</span><span class="p">(</span><span class="n">number</span><span class="o">&gt;</span><span class="mi">2</span> <span class="o">&amp;&amp;</span> <span class="n">number</span><span class="o">%</span><span class="mi">2</span><span class="o">==</span><span class="mi">0</span><span class="p">){</span>
+			<span class="n">goldbach</span><span class="p">(</span><span class="n">number</span><span class="p">);</span>
+		<span class="p">}</span>
+		<span class="k">else</span><span class="p">{</span>
+			<span class="n">printf</span><span class="p">(</span><span class="s">"Incorrect number!</span><span class="se">\n</span><span class="s">"</span><span class="p">);</span>
+		<span class="p">}</span>
+		<span class="n">printf</span><span class="p">(</span><span class="s">"</span><span class="se">\n</span><span class="s">"</span><span class="p">);</span>
+	<span class="p">}</span>
+	<span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="c1">//Asal sayı kontrolu j &lt; n/2, bir sayinin yarisindan buyuk tam boleni olamaz</span>
+<span class="kt">int</span> <span class="nf">is_prime</span><span class="p">(</span><span class="kt">int</span> <span class="n">n</span><span class="p">){</span>
+	<span class="kt">int</span> <span class="n">flag</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+	<span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">j</span> <span class="o">=</span> <span class="mi">2</span><span class="p">;</span> <span class="n">j</span> <span class="o">&lt;</span> <span class="n">n</span><span class="o">/</span><span class="mi">2</span><span class="p">;</span> <span class="n">j</span><span class="o">++</span><span class="p">)</span>
+	<span class="p">{</span>
+		<span class="k">if</span><span class="p">((</span><span class="n">n</span><span class="o">%</span><span class="n">j</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span><span class="p">){</span>
+			<span class="k">return</span> <span class="n">flag</span><span class="o">-</span><span class="mi">1</span><span class="p">;</span>
+		<span class="p">}</span>
+	<span class="p">}</span>
+	<span class="k">return</span> <span class="n">flag</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="c1">//Iki'den buyuk cift tam sayinin iki asal sayi olarak toplamlarini ifade eden tam cozum kumesi</span>
+<span class="kt">void</span> <span class="nf">goldbach</span><span class="p">(</span><span class="kt">int</span> <span class="n">g</span><span class="p">){</span>
+	<span class="kt">int</span> <span class="n">flag</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+
+	<span class="k">if</span><span class="p">(</span><span class="n">primes</span><span class="p">[</span><span class="n">j</span><span class="p">]</span><span class="o">&lt;</span><span class="n">g</span><span class="p">){</span>
+		<span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="n">primes</span><span class="p">[</span><span class="n">j</span><span class="p">]</span><span class="o">+</span><span class="mi">1</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">g</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span>
+		<span class="p">{</span>
+			<span class="k">if</span><span class="p">(</span><span class="n">is_prime</span><span class="p">(</span><span class="n">i</span><span class="p">)</span> <span class="o">==</span> <span class="mi">1</span><span class="p">){</span>
+				<span class="n">j</span><span class="o">++</span><span class="p">;</span>
+				<span class="n">primes</span><span class="p">[</span><span class="n">j</span><span class="p">]</span> <span class="o">=</span> <span class="n">i</span><span class="p">;</span>
+			<span class="p">}</span>
+		<span class="p">}</span>		
+	<span class="p">}</span>
+
+	<span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">j</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span>
+	<span class="p">{</span>
+		<span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">k</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">k</span> <span class="o">&lt;</span> <span class="n">j</span><span class="p">;</span> <span class="n">k</span><span class="o">++</span><span class="p">)</span>
+		<span class="p">{</span>
+			<span class="k">if</span><span class="p">(</span><span class="n">primes</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">+</span> <span class="n">primes</span><span class="p">[</span><span class="n">k</span><span class="p">]</span> <span class="o">==</span> <span class="n">g</span><span class="p">){</span>
+				<span class="n">printf</span><span class="p">(</span><span class="s">"%d = %d + %d</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span><span class="n">g</span><span class="p">,</span><span class="n">primes</span><span class="p">[</span><span class="n">i</span><span class="p">],</span><span class="n">primes</span><span class="p">[</span><span class="n">k</span><span class="p">]);</span>
+				<span class="k">break</span><span class="p">;</span>
+			<span class="p">}</span>
+		<span class="p">}</span>
+	<span class="p">}</span>
+
+<span class="p">}</span></code></pre></figure>
+
+</div>
+<div class="tags-container">
+	
+		<a href="https://hakan.io/tags/#goldbach+hipotezi" class="post-tag">goldbach hipotezi</a>, 
+	
+		<a href="https://hakan.io/tags/#goldbach+san%C4%B1s%C4%B1" class="post-tag">goldbach sanısı</a>, 
+	
+		<a href="https://hakan.io/tags/#asal+say%C4%B1lar" class="post-tag">asal sayılar</a>, 
+	
+		<a href="https://hakan.io/tags/#c+programlama" class="post-tag">c programlama</a>, 
+	
+		<a href="https://hakan.io/tags/#c+%C3%B6rnek" class="post-tag">c örnek</a>
+	
+</div>
+<div class="navigation">
+	
+		<a class="prev" href="/ikili-arama-algoritmasi-binary-search-algorithm-c-ornek-kod/">< İkili Arama Algoritması (Binary Search Algorithm) - C Örnek Kod</a>
+	 
+	<a class="next" href="/wikileaks-kurucusu-julian-assange-tutuklanmasi-uzerine/">Wikileaks Kurucusu Julian Assange'ın Tutuklanması Üzerine ></a>
+
+</div>
+
+	<section class="comment-area w-100">
+		<div class="comment-wrapper">
+			<div id="disqus_thread" class="article-comments"></div>
+			<script>
+			(function() {
+			var d = document, s = d.createElement('script');
+			s.src = '//hakanio.disqus.com/embed.js';
+			s.setAttribute('data-timestamp', +new Date());
+			(d.head || d.body).appendChild(s);
+			})();
+			</script>
+			<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+		</div>
+	</section>
+
+	<div class="footer">
+		<span>Made with <font color="red">♥</font> on Earth, a minimalist Jekyll Theme by <a href="https://hakan.io"><b>Hakan</b></a></span>
+	</div>
+</div>
+	<script src="assets/js/ephesus.js"></script>
+	<script type="text/javascript">
+		if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+			document.documentElement.setAttribute('data-theme', 'dark');
+			document.getElementById('mode-switcher').classList.add('active');
+		}
+	</script>
+
+	
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-50152086-19"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-50152086-19');
+    </script>
+	
+</body>
+</html>

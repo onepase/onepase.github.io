@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="tr-TR" data-theme="light">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0,viewport-fit=cover">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<title>TinyMCE Kullanılan Textarea&#8217;ya Ekleme Yapma - Hakan Torun</title>
+		<meta name="description" content="Hakan Torun Kişisel Blog Sitesi. Bilgisayar mühendisliği, yazılım geliştirme, siber güvenlik ve çeşitli konularda blog gönderilerine erişebilirsiniz.">
+		<meta name="keywords" content="">
+		<base href="https://hakan.io" />
+		
+    	<meta content="2012-02-29T05:34:37+02:00" property="article:published_time">
+    	<meta content="https://hakan.io/about/" property="article:author">
+  		
+		<meta property="og:site_name" content="Hakan Torun">
+		<meta property="og:type" content="article" />
+		<meta property="og:url" content="https://hakan.io/tinymce-kullanilan-textareaya-ekleme-yapma/"/>
+		<meta property="og:title" content="TinyMCE Kullanılan Textarea&#8217;ya Ekleme Yapma - Hakan Torun" />
+		<meta property="og:description" content="Hakan Torun Kişisel Blog Sitesi. Bilgisayar mühendisliği, yazılım geliştirme, siber güvenlik ve çeşitli konularda blog gönderilerine erişebilirsiniz." />
+		<meta property="og:image" content="https://hakan.io/assets/images/favicon.png"/>
+		<meta name="twitter:card" content="summary"/>
+		<meta property="twitter:title" content="TinyMCE Kullanılan Textarea&#8217;ya Ekleme Yapma - Hakan Torun" />
+		<meta property="twitter:description" content="Hakan Torun Kişisel Blog Sitesi. Bilgisayar mühendisliği, yazılım geliştirme, siber güvenlik ve çeşitli konularda blog gönderilerine erişebilirsiniz." />
+		<meta property="twitter:image" content="https://hakan.io/assets/images/favicon.png" />
+		<link rel="stylesheet" href="assets/css/highlight.css">
+		<link rel="stylesheet" href="assets/css/style.css">
+		<link rel="shortcut icon" href="assets/images/favicon.png" />
+		<link rel="alternate" type="application/atom+xml" title="Hakan Torun" href="https://hakan.io/atom.xml">
+		<link rel="alternate" type="application/json" title="Hakan Torun" href="https://hakan.io/feed.json" />
+		<link rel="sitemap" type="application/xml" title="sitemap" href="https://hakan.io/sitemap.xml" />
+		<meta name="google-site-verification" content="Q4Ewp22lX-DiRoBVzVVP13l6lh2oxChSmpGfBP0SPj8" />
+	</head>
+<body>
+<div class="container">
+	<div class="profile">
+		<a href="https://hakan.io"><img src="assets/images/hakan-torun.jpg" class="profile-image"></a>
+		<div class="profile-about">
+			<h2 style="margin-bottom: 0; font-weight: 700;">Hakan Torun</h2>
+			
+				<a href="https://facebook.com/onepase" target="_blank"><img src="assets/images/icon/facebook.svg" class="social-icon"></a>
+			
+			<a href="https://twitter.com/onepase" target="_blank"><img src="assets/images/icon/twitter.svg" class="social-icon"></a>
+			<a href="https://instagram.com/onepase" target="_blank"><img src="assets/images/icon/instagram.svg" class="social-icon"></a>
+			<a href="https://youtube.com/onepase" target="_blank"><img src="assets/images/icon/youtube.svg" class="social-icon"></a>
+			<a href="https://github.com/onepase" target="_blank"><img src="assets/images/icon/github.svg" class="social-icon"></a>
+			<a href="about"><img src="assets/images/icon/me.svg" class="social-icon"></a>
+			<br>
+			Computer Engineer @pardinus <br> Founder @zaqa <br> Open Source /#linux
+			<br>
+			<div class="mode" id="mode-switcher" onclick="toggleNightMode();">
+				<span></span>
+			</div>
+		</div>
+	</div>
+	
+<div class="post-header">
+	<div class="post-date">29.02.2012</div>
+	<div class="post-share">
+		Share:&nbsp; 
+		<a href="https://www.facebook.com/sharer/sharer.php?u=https://hakan.io/tinymce-kullanilan-textareaya-ekleme-yapma" target="_blank"><img src="assets/images/icon/facebook.svg" class="social-icon"></a>
+		<a href="https://twitter.com/intent/tweet?source=tweetbutton&amp;original_referer=https://hakan.io/tinymce-kullanilan-textareaya-ekleme-yapma&amp;text=TinyMCE Kullanılan Textarea&#8217;ya Ekleme Yapma - https://hakan.io/tinymce-kullanilan-textareaya-ekleme-yapma" target="_blank"><img src="assets/images/icon/twitter.svg" class="social-icon"></a>
+		<a href="https://api.whatsapp.com/send?text=https://hakan.io/tinymce-kullanilan-textareaya-ekleme-yapma" target="_blank"><img src="assets/images/icon/whatsapp.svg" class="social-icon"></a>
+	</div>
+</div>
+
+<div class="blog-post-content">
+	<h1>TinyMCE Kullanılan Textarea&#8217;ya Ekleme Yapma</h1>
+	<p>TinyMCE kullanışlı bir editör. Web uygulamalarında içeriklerin tekrar elden geçirilmesi hususunu bir nebze olsun hafifleten bir editör. Gel gelelim TinyMCE kullanılan bir alanda manipülasyon yapılması gerektiğinde farklı bir yöntem kullanılması gerektiğinden bihaber yazılımcının canını biraz sıkar.</p>
+
+<p>Hemen konuya geçelim;</p>
+
+<p>Mesela web uygulamamızın panel kısmından haber ekleme modülünde TinyMCE kullandık ve kullanıcı bu alana butonlar aracılığıyla eklemeler yapmak istedi. Örneğin kullanıcı editörü kullanırken yazı içine resim eklemek istedi. Önce yazının o anki hali tutulacak, her resim ekleme işleminde bu işlem tekrarlanacak ve iş anlamsızlaşacak. Kullanıcı her bir eklemede bir önceki veriyi kısmen kaybedecek. Bu noktada  jquery maalesef pek işe yaramıyor. Şöyle ki;</p>
+
+<p> </p>
+
+<ul>
+  <li>Şu anki içeriği önbellekle</li>
+  <li>Eklenen resmi içerikle birlikte bas</li>
+</ul>
+
+<p>ile ekleme yapmaya çalıştığınızda ne yazık ki her eklemede bir önceki veriyi kaybediyoruz. Bu noktada TinyMCE imdadımıza koşuyor ve</p>
+
+<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="nx">tinyMCE</span><span class="p">.</span><span class="nx">execCommand</span><span class="p">(</span><span class="o">&amp;</span><span class="err">#</span><span class="mi">039</span><span class="p">;</span><span class="nx">mceInsertContent</span><span class="o">&amp;</span><span class="err">#</span><span class="mi">039</span><span class="p">;,</span> <span class="kc">false</span><span class="p">,</span> <span class="o">&amp;</span><span class="err">#</span><span class="mi">039</span><span class="p">;</span><span class="o">&amp;</span><span class="nx">lt</span><span class="p">;</span><span class="nx">img</span> <span class="nx">witdh</span><span class="o">=</span><span class="dl">"</span><span class="s2">100%</span><span class="dl">"</span> <span class="nx">src</span><span class="o">=</span><span class="dl">"</span><span class="s2">http://www.mysite.com/myImage.jpg</span><span class="dl">"</span>  <span class="o">/&amp;</span><span class="nx">gt</span><span class="p">;</span><span class="o">&amp;</span><span class="err">#</span><span class="mi">039</span><span class="p">;);</span></code></pre></figure>
+
+<p>tinyMCE.execCommand vasıtası ile yazı içerisine rahatlılla ekleme yapabiliyoruz. Pek tabi resim ekleme dışında her hangi bir içerik eklemek bu yolla mümkün. Bu kullanımı TinyMCE’ye bir image uploader yazarken kullanmak zorunda kaldım. Maalesef TinyMCE image upload eklentisini ücretsiz olarak dağıtmıyor ve bu noktada kendi çözümünüzü üretmeniz ya da ücreti karşılığında almanız gerek.</p>
+
+<p>Bu arada yazı başlığı biraz garip oldu galiba. Saat sabah 05:30 idare edelim  <img src="http://www.eksihayaller.com/wp-includes/images/smilies/icon_smile.gif" alt=":)" class="wp-smiley" /></p>
+
+</div>
+<div class="tags-container">
+	
+</div>
+<div class="navigation">
+	
+		<a class="prev" href="/php-session-kullanimi/">< PHP Session Kullanımı</a>
+	 
+	<a class="next" href="/phpsysinfo-php-server-monitor/">PhpSysInfo &#8211; Php Server Monitor ></a>
+
+</div>
+
+	<section class="comment-area w-100">
+		<div class="comment-wrapper">
+			<div id="disqus_thread" class="article-comments"></div>
+			<script>
+			(function() {
+			var d = document, s = d.createElement('script');
+			s.src = '//hakanio.disqus.com/embed.js';
+			s.setAttribute('data-timestamp', +new Date());
+			(d.head || d.body).appendChild(s);
+			})();
+			</script>
+			<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+		</div>
+	</section>
+
+	<div class="footer">
+		<span>Made with <font color="red">♥</font> on Earth, a minimalist Jekyll Theme by <a href="https://hakan.io"><b>Hakan</b></a></span>
+	</div>
+</div>
+	<script src="assets/js/ephesus.js"></script>
+	<script type="text/javascript">
+		if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+			document.documentElement.setAttribute('data-theme', 'dark');
+			document.getElementById('mode-switcher').classList.add('active');
+		}
+	</script>
+
+	
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-50152086-19"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-50152086-19');
+    </script>
+	
+</body>
+</html>

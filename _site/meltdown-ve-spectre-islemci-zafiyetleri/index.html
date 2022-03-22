@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="tr-TR" data-theme="light">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0,viewport-fit=cover">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<title>Meltdown ve Spectre İşlemci Zafiyetleri - Hakan Torun</title>
+		<meta name="description" content="Hakan Torun Kişisel Blog Sitesi. Bilgisayar mühendisliği, yazılım geliştirme, siber güvenlik ve çeşitli konularda blog gönderilerine erişebilirsiniz.">
+		<meta name="keywords" content="meltdownspectrezafiyetişlemci zafiyet">
+		<base href="https://hakan.io" />
+		
+    	<meta content="2018-01-04T03:00:00+03:00" property="article:published_time">
+    	<meta content="https://hakan.io/about/" property="article:author">
+  		
+		<meta property="og:site_name" content="Hakan Torun">
+		<meta property="og:type" content="article" />
+		<meta property="og:url" content="https://hakan.io/meltdown-ve-spectre-islemci-zafiyetleri/"/>
+		<meta property="og:title" content="Meltdown ve Spectre İşlemci Zafiyetleri - Hakan Torun" />
+		<meta property="og:description" content="Hakan Torun Kişisel Blog Sitesi. Bilgisayar mühendisliği, yazılım geliştirme, siber güvenlik ve çeşitli konularda blog gönderilerine erişebilirsiniz." />
+		<meta property="og:image" content="https://hakan.io/assets/images/favicon.png"/>
+		<meta name="twitter:card" content="summary"/>
+		<meta property="twitter:title" content="Meltdown ve Spectre İşlemci Zafiyetleri - Hakan Torun" />
+		<meta property="twitter:description" content="Hakan Torun Kişisel Blog Sitesi. Bilgisayar mühendisliği, yazılım geliştirme, siber güvenlik ve çeşitli konularda blog gönderilerine erişebilirsiniz." />
+		<meta property="twitter:image" content="https://hakan.io/assets/images/favicon.png" />
+		<link rel="stylesheet" href="assets/css/highlight.css">
+		<link rel="stylesheet" href="assets/css/style.css">
+		<link rel="shortcut icon" href="assets/images/favicon.png" />
+		<link rel="alternate" type="application/atom+xml" title="Hakan Torun" href="https://hakan.io/atom.xml">
+		<link rel="alternate" type="application/json" title="Hakan Torun" href="https://hakan.io/feed.json" />
+		<link rel="sitemap" type="application/xml" title="sitemap" href="https://hakan.io/sitemap.xml" />
+		<meta name="google-site-verification" content="Q4Ewp22lX-DiRoBVzVVP13l6lh2oxChSmpGfBP0SPj8" />
+	</head>
+<body>
+<div class="container">
+	<div class="profile">
+		<a href="https://hakan.io"><img src="assets/images/hakan-torun.jpg" class="profile-image"></a>
+		<div class="profile-about">
+			<h2 style="margin-bottom: 0; font-weight: 700;">Hakan Torun</h2>
+			
+				<a href="https://facebook.com/onepase" target="_blank"><img src="assets/images/icon/facebook.svg" class="social-icon"></a>
+			
+			<a href="https://twitter.com/onepase" target="_blank"><img src="assets/images/icon/twitter.svg" class="social-icon"></a>
+			<a href="https://instagram.com/onepase" target="_blank"><img src="assets/images/icon/instagram.svg" class="social-icon"></a>
+			<a href="https://youtube.com/onepase" target="_blank"><img src="assets/images/icon/youtube.svg" class="social-icon"></a>
+			<a href="https://github.com/onepase" target="_blank"><img src="assets/images/icon/github.svg" class="social-icon"></a>
+			<a href="about"><img src="assets/images/icon/me.svg" class="social-icon"></a>
+			<br>
+			Computer Engineer @pardinus <br> Founder @zaqa <br> Open Source /#linux
+			<br>
+			<div class="mode" id="mode-switcher" onclick="toggleNightMode();">
+				<span></span>
+			</div>
+		</div>
+	</div>
+	
+<div class="post-header">
+	<div class="post-date">04.01.2018</div>
+	<div class="post-share">
+		Share:&nbsp; 
+		<a href="https://www.facebook.com/sharer/sharer.php?u=https://hakan.io/meltdown-ve-spectre-islemci-zafiyetleri" target="_blank"><img src="assets/images/icon/facebook.svg" class="social-icon"></a>
+		<a href="https://twitter.com/intent/tweet?source=tweetbutton&amp;original_referer=https://hakan.io/meltdown-ve-spectre-islemci-zafiyetleri&amp;text=Meltdown ve Spectre İşlemci Zafiyetleri - https://hakan.io/meltdown-ve-spectre-islemci-zafiyetleri" target="_blank"><img src="assets/images/icon/twitter.svg" class="social-icon"></a>
+		<a href="https://api.whatsapp.com/send?text=https://hakan.io/meltdown-ve-spectre-islemci-zafiyetleri" target="_blank"><img src="assets/images/icon/whatsapp.svg" class="social-icon"></a>
+	</div>
+</div>
+
+<div class="blog-post-content">
+	<h1>Meltdown ve Spectre İşlemci Zafiyetleri</h1>
+	<p>Yeni yılın ilk günleri ile birlikte çok büyük ölçekteki iki güvenlik açığı duyuruldu. Neredeyse şu anda kullanımda olan tüm bilgisayarları, akıllı telefonları, tablet bilgisayarları ve sunucuları etkileyen güvenlik açığı ile parolalarınınız ve hassas verileriniz tehlike altında.</p>
+
+<p>Google Project Zero ekibi tarafından keşfedilen ve duyurulan güvenlik açığı tüm işlemcileri (Intel, AMD, ARM) ve tüm cihazları etkiliyor. Donanım düzeyindeki bu zafiyet iki saldırı olarak kategorilendi. Meltdown ve Spectre.</p>
+
+<p>İki saldırı da modern işlemcilerin performansı artırmak için kullandığı yöntemleri kendi lehine kullanıyor.</p>
+
+<p><strong>Meltdown</strong></p>
+
+<p>İlk olarak Meltdown atağı ile saldırgan, hedef makinanın tüm fiziksel hafızasını okuyabiliyor. Bu da diğer programlar ve işletim sistemi tarafından kullanılan tüm hassas verilerin ve parolaların okunabileceği anlamına geliyor.</p>
+
+<p>Meltdown, kullanıcı uygulamaları ve işletim sistemi arasındaki izolasyonu kırmak için spekülatif çalıştırma özelliğini kullanıyor ve herhangi bir uygulamanın çekirdek için ayrılan bellek de dahil olmak üzere tüm sistem belleğine erişmesine izin veriyor.</p>
+
+<p>Meltdown, Intel işlemcilere özgü bir ayrıcalık yükseltme açığından faydalanıyor. Bu da bellek korumasının aşılmasına neden oluyor.</p>
+
+<p>Güvenlik açığının tüm işlemcileri etkilemesinin sebebi çok temel düzeyde bir problem olması. İşletim sistemi mimarilerinde işletim sistemi çekirdeği ile kullanıcı programları bellek üzerinde bir arada bulunur. Bu da böyle bir güvenlik açığına sebep oluyor. Bu durumu önlemenin yolu işletim sistemi çekirdeği ile kullanıcı programlarını farklı page tablelar üzerinde tutmak, kısaca işletim sistemi çekirdeğini ve kullanıcı programlarını izole etmek. Sorunun çözümü basit fakat her sistem çağrısında page tableların yeniden yüklenmesi gerekiyor ve yama sonuç olarak, yapılan testlere göre %5 – %30 arasında bir performans kaybına sebep olacak.</p>
+
+<p><strong>Spectre</strong></p>
+
+<p>İkinci olarak iste Spectre atağı ile saldırgan tarafından geliştirilen bir program, sistemde çalışırken diğer programların kendi belleklerinin rastgele bölümlerine erişmesine izin vererek veri sızıntısına yol açıyor ve bir yan kanaldan veriyi okuyabiliyor.</p>
+
+<p>Spectre ile meydana gelen güvenlik açığını yamamak pek kolay görünmüyor. Bu zafiyetin tamamen ortadan kaldırılması için işlemci mimarilerinde köklü değişiklikler yapılması gerekmekte ve bu uzun bir süreç anlamına geliyor.</p>
+
+<p>Zafiyet Intel, AMD, ARM işlemcilerini kullanan masaüstü ve taşınabilir bilgisayarlar, sunucular, akıllı telefonlar dahil tüm sistemleri etkiliyor. Öte yandan internet tarayıcıları tarafında Javascript ile zafiyetten faydalanılması mümkün ve bu durum tüm internet kullanıcılarının hassas verilerinin ve parolalarının güvende olmadığı anlamına geliyor.</p>
+
+<p>Google Project Zero ekibi tarafından keşfedilen ve duyurulan güvenlik açıkları zero day kapsamında çoğu işlemci üreticisi ve işletim sistemi tarafından ciddiyetle karşılandı ve duyurulmadan önce gerekli yamalar hazırlandı.</p>
+
+<p>Nasıl Önlem Alınır?</p>
+
+<p>Kimler etkilendi? – Kısaca herkes!</p>
+
+<p><strong>Windows :</strong> Microsoft Windows 10 için bir yama yayınladı. Diğer Windows sürümleri için 9 Ocak’ta bir yama yayınlanacak.</p>
+
+<p><strong>MacOS :</strong> Apple bu güvenlik açıklarının büyük bir kısmını geçen ay yayınlanan High Sierra 10.13.2’de düzeltmişti. High Sierra 10.13.3 sürüm güncellemesi ile eksik kalan kısımları da yamayacak.</p>
+
+<p><strong>Linux :</strong>  Linux çekirdekleri için, çekirdeği tamamen ayrı bir adres alanına taşıyacak olan kernel page table isolation (KPTI) içeren yamaları yayınlandı.</p>
+
+<p><strong>Android :</strong>  Google Pixel ve Nexus kullanıcıları için güvenlik yamalarını içeren güncelleme yayınladı. Diğer marka model cihaz kullanıcıları ise üreticilerinin bir güvenlik yaması yayınlamasını beklemek zorunda.</p>
+
+</div>
+<div class="tags-container">
+	
+		<a href="https://hakan.io/tags/#meltdown" class="post-tag">meltdown</a>, 
+	
+		<a href="https://hakan.io/tags/#spectre" class="post-tag">spectre</a>, 
+	
+		<a href="https://hakan.io/tags/#zafiyet" class="post-tag">zafiyet</a>, 
+	
+		<a href="https://hakan.io/tags/#i%C5%9Flemci+zafiyet" class="post-tag">işlemci zafiyet</a>
+	
+</div>
+<div class="navigation">
+	
+		<a class="prev" href="/apple-iphone-x-face-id-maske-kullanilarak-asildi/">< Apple iPhone X Face ID Maske Kullanılarak Aşıldı</a>
+	 
+	<a class="next" href="/mukemmel-sayilar-c-programlama-dili-ile-ornek-kodlar/">Mükemmel Sayılar - C Programlama Dili İle Örnek Kodlar ></a>
+
+</div>
+
+	<section class="comment-area w-100">
+		<div class="comment-wrapper">
+			<div id="disqus_thread" class="article-comments"></div>
+			<script>
+			(function() {
+			var d = document, s = d.createElement('script');
+			s.src = '//hakanio.disqus.com/embed.js';
+			s.setAttribute('data-timestamp', +new Date());
+			(d.head || d.body).appendChild(s);
+			})();
+			</script>
+			<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+		</div>
+	</section>
+
+	<div class="footer">
+		<span>Made with <font color="red">♥</font> on Earth, a minimalist Jekyll Theme by <a href="https://hakan.io"><b>Hakan</b></a></span>
+	</div>
+</div>
+	<script src="assets/js/ephesus.js"></script>
+	<script type="text/javascript">
+		if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+			document.documentElement.setAttribute('data-theme', 'dark');
+			document.getElementById('mode-switcher').classList.add('active');
+		}
+	</script>
+
+	
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-50152086-19"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-50152086-19');
+    </script>
+	
+</body>
+</html>

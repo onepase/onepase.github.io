@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="tr-TR" data-theme="light">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0,viewport-fit=cover">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<title>Python Scrapy Kurulumu Ve Kullanımı - Hakan Torun</title>
+		<meta name="description" content="Hakan Torun Kişisel Blog Sitesi. Bilgisayar mühendisliği, yazılım geliştirme, siber güvenlik ve çeşitli konularda blog gönderilerine erişebilirsiniz.">
+		<meta name="keywords" content="pythonscrapykurulumkullanım">
+		<base href="https://hakan.io" />
+		
+    	<meta content="2017-10-07T03:15:12+03:00" property="article:published_time">
+    	<meta content="https://hakan.io/about/" property="article:author">
+  		
+		<meta property="og:site_name" content="Hakan Torun">
+		<meta property="og:type" content="article" />
+		<meta property="og:url" content="https://hakan.io/python-scrapy-kurulumu-ve-kullanimi/"/>
+		<meta property="og:title" content="Python Scrapy Kurulumu Ve Kullanımı - Hakan Torun" />
+		<meta property="og:description" content="Hakan Torun Kişisel Blog Sitesi. Bilgisayar mühendisliği, yazılım geliştirme, siber güvenlik ve çeşitli konularda blog gönderilerine erişebilirsiniz." />
+		<meta property="og:image" content="https://hakan.io/assets/images/favicon.png"/>
+		<meta name="twitter:card" content="summary"/>
+		<meta property="twitter:title" content="Python Scrapy Kurulumu Ve Kullanımı - Hakan Torun" />
+		<meta property="twitter:description" content="Hakan Torun Kişisel Blog Sitesi. Bilgisayar mühendisliği, yazılım geliştirme, siber güvenlik ve çeşitli konularda blog gönderilerine erişebilirsiniz." />
+		<meta property="twitter:image" content="https://hakan.io/assets/images/favicon.png" />
+		<link rel="stylesheet" href="assets/css/highlight.css">
+		<link rel="stylesheet" href="assets/css/style.css">
+		<link rel="shortcut icon" href="assets/images/favicon.png" />
+		<link rel="alternate" type="application/atom+xml" title="Hakan Torun" href="https://hakan.io/atom.xml">
+		<link rel="alternate" type="application/json" title="Hakan Torun" href="https://hakan.io/feed.json" />
+		<link rel="sitemap" type="application/xml" title="sitemap" href="https://hakan.io/sitemap.xml" />
+		<meta name="google-site-verification" content="Q4Ewp22lX-DiRoBVzVVP13l6lh2oxChSmpGfBP0SPj8" />
+	</head>
+<body>
+<div class="container">
+	<div class="profile">
+		<a href="https://hakan.io"><img src="assets/images/hakan-torun.jpg" class="profile-image"></a>
+		<div class="profile-about">
+			<h2 style="margin-bottom: 0; font-weight: 700;">Hakan Torun</h2>
+			
+				<a href="https://facebook.com/onepase" target="_blank"><img src="assets/images/icon/facebook.svg" class="social-icon"></a>
+			
+			<a href="https://twitter.com/onepase" target="_blank"><img src="assets/images/icon/twitter.svg" class="social-icon"></a>
+			<a href="https://instagram.com/onepase" target="_blank"><img src="assets/images/icon/instagram.svg" class="social-icon"></a>
+			<a href="https://youtube.com/onepase" target="_blank"><img src="assets/images/icon/youtube.svg" class="social-icon"></a>
+			<a href="https://github.com/onepase" target="_blank"><img src="assets/images/icon/github.svg" class="social-icon"></a>
+			<a href="about"><img src="assets/images/icon/me.svg" class="social-icon"></a>
+			<br>
+			Computer Engineer @pardinus <br> Founder @zaqa <br> Open Source /#linux
+			<br>
+			<div class="mode" id="mode-switcher" onclick="toggleNightMode();">
+				<span></span>
+			</div>
+		</div>
+	</div>
+	
+<div class="post-header">
+	<div class="post-date">07.10.2017</div>
+	<div class="post-share">
+		Share:&nbsp; 
+		<a href="https://www.facebook.com/sharer/sharer.php?u=https://hakan.io/python-scrapy-kurulumu-ve-kullanimi" target="_blank"><img src="assets/images/icon/facebook.svg" class="social-icon"></a>
+		<a href="https://twitter.com/intent/tweet?source=tweetbutton&amp;original_referer=https://hakan.io/python-scrapy-kurulumu-ve-kullanimi&amp;text=Python Scrapy Kurulumu Ve Kullanımı - https://hakan.io/python-scrapy-kurulumu-ve-kullanimi" target="_blank"><img src="assets/images/icon/twitter.svg" class="social-icon"></a>
+		<a href="https://api.whatsapp.com/send?text=https://hakan.io/python-scrapy-kurulumu-ve-kullanimi" target="_blank"><img src="assets/images/icon/whatsapp.svg" class="social-icon"></a>
+	</div>
+</div>
+
+<div class="blog-post-content">
+	<h1>Python Scrapy Kurulumu Ve Kullanımı</h1>
+	<p>Scrapy Python ile yazılmış, html ve xml gibi yapısal içeriklerden verilerin ayıklanmasını sağlayan açık kaynak bir frameworktür. Özellikle web siteleri üzerinde yeterince hızlı bir şekilde scraping ve crawling yapabilmektedir.</p>
+
+<p>pip kurulu sistemler üzerinde</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">pip <span class="nb">install </span>scrapy</code></pre></figure>
+
+<p>komutu ile kurulumu yapılabilir. Kurulum gerçekleştirildikten sonra terminal üzerinden proje dizininde,</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">scrapy startproject tutorial</code></pre></figure>
+
+<p>komutuyla yeni bir scrapy projesi oluşturulur. Bir scrapy projesi oluşturulduğunda şu şekilde bir dosya/dizin yapısı oluşmuş olacaktır.</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">tutorial/
+    scrapy.cfg            <span class="c"># deploy configuration file</span>
+
+    tutorial/             <span class="c"># project's Python module, you'll import your code from here</span>
+        __init__.py
+
+        items.py          <span class="c"># project items definition file</span>
+
+        pipelines.py      <span class="c"># project pipelines file</span>
+
+        settings.py       <span class="c"># project settings file</span>
+
+        spiders/          <span class="c"># a directory where you'll later put your spiders</span>
+            __init__.py</code></pre></figure>
+
+<p>Örnek bir spider</p>
+
+<figure class="highlight"><pre><code class="language-python" data-lang="python"><span class="kn">import</span> <span class="nn">scrapy</span>
+
+<span class="k">class</span> <span class="nc">QuotesSpider</span><span class="p">(</span><span class="n">scrapy</span><span class="p">.</span><span class="n">Spider</span><span class="p">):</span>
+    <span class="n">name</span> <span class="o">=</span> <span class="s">"quotes"</span>
+    <span class="n">start_urls</span> <span class="o">=</span> <span class="p">[</span>
+        <span class="s">'http://quotes.toscrape.com/page/1/'</span><span class="p">,</span>
+        <span class="s">'http://quotes.toscrape.com/page/2/'</span><span class="p">,</span>
+    <span class="p">]</span>
+
+    <span class="k">def</span> <span class="nf">parse</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">response</span><span class="p">):</span>
+        <span class="k">for</span> <span class="n">quote</span> <span class="ow">in</span> <span class="n">response</span><span class="p">.</span><span class="n">css</span><span class="p">(</span><span class="s">'div.quote'</span><span class="p">):</span>
+            <span class="k">yield</span> <span class="p">{</span>
+                <span class="s">'text'</span><span class="p">:</span> <span class="n">quote</span><span class="p">.</span><span class="n">css</span><span class="p">(</span><span class="s">'span.text::text'</span><span class="p">).</span><span class="n">extract_first</span><span class="p">(),</span>
+                <span class="s">'author'</span><span class="p">:</span> <span class="n">quote</span><span class="p">.</span><span class="n">css</span><span class="p">(</span><span class="s">'small.author::text'</span><span class="p">).</span><span class="n">extract_first</span><span class="p">(),</span>
+                <span class="s">'tags'</span><span class="p">:</span> <span class="n">quote</span><span class="p">.</span><span class="n">css</span><span class="p">(</span><span class="s">'div.tags a.tag::text'</span><span class="p">).</span><span class="n">extract</span><span class="p">(),</span>
+            <span class="p">}</span></code></pre></figure>
+
+<p>Scrapy örümcekleri ile bir veya birden fazla adres üzerinde tarama ve veri çıkarma işlemi yapılabilmektedir. Scrapy seçicileri ile istenen alanlar seçilip filtrelenebilmektedir. Scrapy seçicilerinde xpath scrapy tarafından desteklenmektedir.</p>
+
+<p>Crawl etmek için</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">scrapy crawl quotes</code></pre></figure>
+
+<p>Elde edilen çıktıyı json formatında bir dosyaya yazmak için</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">scrapy crawl quotes <span class="nt">-o</span> qutoes.json</code></pre></figure>
+
+<p>komutu kullanılabilir.</p>
+
+</div>
+<div class="tags-container">
+	
+		<a href="https://hakan.io/tags/#python" class="post-tag">python</a>, 
+	
+		<a href="https://hakan.io/tags/#scrapy" class="post-tag">scrapy</a>, 
+	
+		<a href="https://hakan.io/tags/#kurulum" class="post-tag">kurulum</a>, 
+	
+		<a href="https://hakan.io/tags/#kullan%C4%B1m" class="post-tag">kullanım</a>
+	
+</div>
+<div class="navigation">
+	
+		<a class="prev" href="/2013-yilinda-1-degil-3-milyar-yahoo-kullanici-verisi-calindi/">< 2013 Yılında 1 Değil 3 Milyar Yahoo Kullanıcı Bilgisi Çalındı</a>
+	 
+	<a class="next" href="/apple-iphone-x-face-id-maske-kullanilarak-asildi/">Apple iPhone X Face ID Maske Kullanılarak Aşıldı ></a>
+
+</div>
+
+	<section class="comment-area w-100">
+		<div class="comment-wrapper">
+			<div id="disqus_thread" class="article-comments"></div>
+			<script>
+			(function() {
+			var d = document, s = d.createElement('script');
+			s.src = '//hakanio.disqus.com/embed.js';
+			s.setAttribute('data-timestamp', +new Date());
+			(d.head || d.body).appendChild(s);
+			})();
+			</script>
+			<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+		</div>
+	</section>
+
+	<div class="footer">
+		<span>Made with <font color="red">♥</font> on Earth, a minimalist Jekyll Theme by <a href="https://hakan.io"><b>Hakan</b></a></span>
+	</div>
+</div>
+	<script src="assets/js/ephesus.js"></script>
+	<script type="text/javascript">
+		if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+			document.documentElement.setAttribute('data-theme', 'dark');
+			document.getElementById('mode-switcher').classList.add('active');
+		}
+	</script>
+
+	
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-50152086-19"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-50152086-19');
+    </script>
+	
+</body>
+</html>
