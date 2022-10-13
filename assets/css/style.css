@@ -1,14 +1,14 @@
 @import url('https://fonts.googleapis.com/css?family=Catamaran:400,500,600,700&subset=latin-ext');
 :root {
-    --bg-color: #fafafa;
-    --bg-hover-color: #ececec;
+    --bg-color: #fff;
+    --bg-hover-color: #e7e7e7;
     --body-bg: #fff;
     --primary-font-color: #000;
     --border-color: #dadada;
 }
 
 [data-theme="dark"] {
-  --bg-color: #161f29;
+  --bg-color: #10171e;
   --bg-hover-color:#36404c;
   --body-bg: #10171e;
   --primary-font-color: #bfbfbf;
@@ -21,7 +21,7 @@ body{
   background: var(--body-bg);
   color: var(--primary-font-color);
   margin: 0;
-  padding: 5px;
+  padding: 10px;
 }
 .container{
   display: flex; 
@@ -46,7 +46,7 @@ body{
   flex-wrap: wrap; 
   justify-content: center;
   width: 100%;
-  padding: 5px 10px;
+  padding: 10px 10px;
   background: var(--bg-color);
   border:1px dashed var(--border-color);
   font-size: 12px;
@@ -59,7 +59,7 @@ body{
   flex-wrap: wrap; 
   justify-content: space-between; 
   align-items: center;
-  padding: 5px 10px;
+  padding: 10px 10px;
   margin-bottom: 5px;
   background:var(--bg-color);
   border: 1px dashed var(--border-color);
@@ -79,7 +79,7 @@ body{
   flex-wrap: wrap; 
   justify-content: space-between; 
   align-items: center;
-  padding: 5px 10px;
+  padding: 10px 10px;
   margin-bottom: 5px;
   background:var(--bg-color);
   border:1px dashed var(--border-color);
@@ -102,7 +102,7 @@ body{
 .post-tag{margin-bottom: 5px;}
 
 .tags{display: flex; flex-wrap: wrap; justify-content: space-between;}
-.tag{background: var(--bg-color); padding: 5px 10px; margin-right: 10px; margin-bottom: 10px; display: flex; align-items: center;}
+.tag{background: var(--bg-color); padding: 10px 10px; margin-right: 10px; margin-bottom: 10px; display: flex; align-items: center;}
 
 .navigation{
   width: 100%; 
@@ -114,10 +114,11 @@ body{
   margin-bottom: 5px;
   background:var(--bg-color);
   border:1px dashed var(--border-color);
+  padding: 10px 10px;
 
 }
-.navigation .prev{width: 45%; overflow: hidden; white-space: nowrap; text-overflow: ellipsis; color: var(--primary-font-color); font-weight: 600; padding: 5px 10px;}
-.navigation .next{width: 45%; color: var(--primary-font-color); overflow: hidden; white-space: nowrap; text-overflow: ellipsis; font-weight: 600; text-align: right; padding: 5px 10px;}
+.navigation .prev{width: 45%; overflow: hidden; white-space: nowrap; text-overflow: ellipsis; color: var(--primary-font-color); font-weight: 600; padding: 10px 10px;}
+.navigation .next{width: 45%; color: var(--primary-font-color); overflow: hidden; white-space: nowrap; text-overflow: ellipsis; font-weight: 600; text-align: right; padding: 10px 10px;}
 
 .pagination{
   width: 100%; 
@@ -126,7 +127,7 @@ body{
   flex-wrap: wrap; 
   justify-content: space-between; 
   align-items: center;
-  padding: 5px 10px;
+  padding: 10px 10px;
   margin-bottom: 5px;
   background:var(--bg-color);
 }
@@ -138,7 +139,7 @@ body{
   font-size: 18px;
 }
 
-.post-tag{background: var(--bg-color); color:var(--primary-font-color); padding: 5px 10px;}
+.post-tag{background: var(--bg-color); color:var(--primary-font-color); padding: 10px 10px;}
 
 .profile{
   width: 100%; 
@@ -147,7 +148,7 @@ body{
   flex-wrap: wrap; 
   justify-content: space-between; 
   align-items: center;
-  padding: 5px 10px;
+  padding: 10px 10px;
   margin-bottom: 20px;
 }
 .profile-image-container{width: 40%;}
