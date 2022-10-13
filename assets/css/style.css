@@ -114,7 +114,6 @@ body{
   margin-bottom: 5px;
   background:var(--bg-color);
   border:1px dashed var(--border-color);
-  padding: 10px 10px;
 
 }
 .navigation .prev{width: 45%; overflow: hidden; white-space: nowrap; text-overflow: ellipsis; color: var(--primary-font-color); font-weight: 600; padding: 10px 10px;}
