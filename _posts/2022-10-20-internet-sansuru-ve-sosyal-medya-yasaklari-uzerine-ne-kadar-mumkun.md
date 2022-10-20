@@ -24,6 +24,6 @@ Yine vakti zamanında [TOR ağına erişim engellenmeye çalışıldı](https://
 
 Hal böyleyken birilerinin interneti kontrol altına alabileceği yönünde attıkları adımlar aynen Moss ve Roy'un Jen'e yaptıkları şaka tadında ama bu sefer maalesef şaka değil.
 
-![16. İstanbul Bienali - Simon Fujiwara]({{ site.baseurl }}/assets/images/post/istanbul-bienali-simon-fujiwara.jpg "16. İstanbul Bienali - Simon Fujiwara")*Görsel: 16. İstanbul Bienali / 2019*
+![16. İstanbul Bienali - Simon Fujiwara]({{ site.baseurl }}/assets/images/post/istanbul-bienali-simon-fujiwara.jpg "16. İstanbul Bienali - Simon Fujiwara")*Görsel: 16. İstanbul Bienali - Simon Fujiwara*
 
 <sup>Dipnot: Bu blog yazısı 2020 yılında gündemi meşgul eden internet sansürü ile ilgili yazdığım birkaç tweet'in genişletilmiş halidir. Orijinal tweet serisine [bu adresten](https://twitter.com/onepase/status/1279387322258280449) ulaşabilirsiniz.</sup>
