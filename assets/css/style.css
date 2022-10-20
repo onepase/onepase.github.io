@@ -6,6 +6,7 @@
     --primary-font-color: #000;
     --border-color: #dadada;
     --link-font-color: #ffa000;
+    --top-border-color: #000;
 }
 
 [data-theme="dark"] {
@@ -15,6 +16,7 @@
   --primary-font-color: #bfbfbf;
   --border-color: #6a6a6a;
   --link-font-color: #ffa000;
+  --top-border-color: #ffa000;
 }
 
 body{
@@ -24,7 +26,7 @@ body{
   color: var(--primary-font-color);
   margin: 0;
   padding: 10px;
-  border-top: 5px solid #ffa000;
+  border-top: 3px solid var(--top-border-color);
 }
 .container{
   display: flex; 
