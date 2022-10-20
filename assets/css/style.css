@@ -24,6 +24,7 @@ body{
   color: var(--primary-font-color);
   margin: 0;
   padding: 10px;
+  border-top: 5px solid #ffa000;
 }
 .container{
   display: flex; 
@@ -149,11 +150,11 @@ body{
   flex-wrap: wrap; 
   justify-content: space-between; 
   align-items: center;
-  padding: 10px 10px;
+  padding: 10px 10px 10px 0;
   margin-bottom: 20px;
 }
 .profile-image-container{width: 40%;}
-.profile-image{width: 128px; height: 128px; border-radius: 50%; transition: transform .2s;}
+.profile-image{width: 150px; height: 150px; border-radius: .5rem; transition: transform .2s;}
 .profile-image:hover{transform: scale(1.05);}
 .profile-about{width:60%; text-align: right;}
 
