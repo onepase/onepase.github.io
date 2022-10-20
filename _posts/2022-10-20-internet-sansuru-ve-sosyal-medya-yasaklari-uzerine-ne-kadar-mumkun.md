@@ -1,6 +1,6 @@
 ---
 title: 'İnternet Sansürü ve Sosyal Medya Yasakları Üzerine - Ne Kadar Mümkün?'
-date: 2022-10-20T12:15:00+00:00
+date: 2022-10-20T08:15:00+00:00
 author: Hakan
 layout: post
 permalink: /internet-sansuru-ve-sosyal-medya-yasaklari-uzerine-ne-kadar-mumkun/
