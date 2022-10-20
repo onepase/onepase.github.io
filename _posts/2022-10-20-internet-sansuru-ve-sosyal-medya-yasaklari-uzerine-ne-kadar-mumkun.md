@@ -26,4 +26,4 @@ Hal böyleyken birilerinin interneti kontrol altına alabileceği yönünde att�
 
 ![16. İstanbul Bienali - Simon Fujiwara]({{ site.baseurl }}/assets/images/post/istanbul-bienali-simon-fujiwara.jpg "16. İstanbul Bienali - Simon Fujiwara")*Görsel: 16. İstanbul Bienali / 2019*
 
-<sub><sup>Dipnot: Bu blog yazısı 2020 yılında gündemi meşgul eden internet sansürü ile ilgili yazdığım birkaç tweet'in genişletilmiş halidir. Orijinal tweet serisine [bu adresten](https://twitter.com/onepase/status/1279387322258280449) ulaşabilirsiniz.</sup></sup>
+<sup>Dipnot: Bu blog yazısı 2020 yılında gündemi meşgul eden internet sansürü ile ilgili yazdığım birkaç tweet'in genişletilmiş halidir. Orijinal tweet serisine [bu adresten](https://twitter.com/onepase/status/1279387322258280449) ulaşabilirsiniz.</sup>
