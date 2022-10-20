@@ -191,7 +191,7 @@ pre{font-size: 14px; max-width: 90vw; overflow: auto;}
     left: 1px;
   }
   h1{font-size: 1.5rem;}
-  .profile-image{width: 150px; height: 150px;}
+  .profile-image{width: 130px; height: 130px;}
 }
 
 [data-theme="dark"] .social-icon{filter: invert(100%) sepia(50%) saturate(0%) hue-rotate(360deg) brightness(100%) contrast(100%);}
