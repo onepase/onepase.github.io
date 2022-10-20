@@ -5,7 +5,7 @@ author: Hakan
 layout: post
 permalink: /internet-sansuru-ve-sosyal-medya-yasaklari-uzerine-ne-kadar-mumkun/
 categories: Genel
-tags: [internet sansürü, sosyal medya yasakları, internet engellenebilir mi]
+tags: [internet sansürü]
 ---
 Dünya'nın güzide memleketlerinde zaman zaman otoriter yönetimlerin iştahını kabartan internet sansürü üzerine çokça konuşuluyor. Esasında yönetimler pratikte teknik olarak uygulanması zor olan geniş çaplı bir sansür yerine bireyleri baskı altına alarak bir oto-sansür oluşturacak yöntemleri izlemeyi daha çok tercih ediyor. Ancak geniş çaplı bir sansür veya erişim engellemesi teknik olarak ne kadar mümkün?
 
