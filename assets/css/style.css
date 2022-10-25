@@ -140,7 +140,7 @@ body{
 .blog-post-content{
   width: 100%;
   font-size: 15px;
-  line-height: 1.5;
+  line-height: 1.7;
   text-align: justify;
 }
 
@@ -159,7 +159,7 @@ body{
 .profile-image-container{width: 40%;}
 .profile-image{width: 128px; height: 128px; border-radius: 50%; transition: transform .2s;}
 .profile-image:hover{transform: scale(1.05);}
-.profile-about{width:60%; text-align: right;}
+.profile-about{width:60%; text-align: right; line-height: 1.5;}
 
 h1{font-size: 1.5rem;}
 
