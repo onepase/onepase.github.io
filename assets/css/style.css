@@ -197,11 +197,6 @@ code{font-family: 'Source Code Pro', sans-serif;font-size: 12px; background: rgb
   .profile-image{width: 96px; height: 96px;}
 }
 
-
-@media only screen and (max-width: 1024px) {
-  .container{width: 60%;}
-}
-
 img {
   display: inline-block;
   margin-bottom: 20px;
