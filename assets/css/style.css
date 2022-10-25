@@ -63,7 +63,7 @@ body{
   justify-content: space-between; 
   align-items: center;
   padding: 5px 10px;
-  margin-bottom: 5px;
+  margin-bottom: 7px;
   background:var(--bg-color);
   border: 1px dashed var(--border-color);
 }
