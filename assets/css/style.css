@@ -23,7 +23,7 @@ body{
   background: var(--body-bg);
   color: var(--primary-font-color);
   margin: 0;
-  padding: 5px;
+  padding: 10px;
 }
 .container{
   display: flex; 
@@ -139,7 +139,8 @@ body{
 
 .blog-post-content{
   width: 100%;
-  font-size: 14px;
+  font-size: 15px;
+  line-height: 1.5;
   text-align: justify;
 }
 
@@ -173,7 +174,7 @@ a{color: mediumseagreen; text-decoration: none;}
 img{max-width: 100%;}
 figure{margin:0; padding: 15px;}
 pre{font-size: 14px; max-width: 90vw; overflow: auto;}
-code{font-family: 'Source Code Pro', sans-serif;font-size: 12px; background: rgb(201, 201, 201); border:1px round dashed var(--border-color);padding-left: 10px;padding-right: 10px;padding-top: 1px;padding-bottom: 1px;}
+code{font-family: 'Source Code Pro', sans-serif;font-size: 12px;}
 .social-icon{height: 24px;}
 
 @media (min-width: 1200px){
