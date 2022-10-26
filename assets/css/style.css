@@ -179,6 +179,8 @@ pre{font-size: 14px; max-width: 90vw; overflow: auto;}
 code{font-family: 'Source Code Pro', sans-serif;font-size: 12px;}
 .social-icon{height: 24px;}
 
+.highlight{line-height: 1;}
+
 @media (min-width: 1200px){
   .container, .container-lg, .container-md, .container-sm, .container-xl {
     max-width: 800px;
