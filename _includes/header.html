@@ -29,5 +29,10 @@
 		<link rel="alternate" type="application/json" title="{{ site.title }}" href="{{ site.url }}{{ site.baseurl }}/feed.json" />
 		<link rel="sitemap" type="application/xml" title="sitemap" href="{{ site.url }}{{ site.baseurl }}/sitemap.xml" />
 		<meta name="google-site-verification" content="{{site.google_verify}}" />
+		{% if !page.date %}
+		<script type="application/ld+json">
+			{"@context":"https://schema.org","@type":"WebSite","author":{"@type":"Person","name":"Hakan Torun"},"description":"Hakan Torun","headline":"Anasayfa","name":"Hakan Torun","publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"https://hakan.io/assets/images/hakan-torun-2.jpg"},"name":"Hakan Torun"},"url":"https://hakan.io/"}
+		</script>
+  		{% endif %}
 	</head>
 <body>
