@@ -15,7 +15,7 @@ Karar ağaçları, bir dizi basit testi mantıksal olarak birleştiren sıralı 
 Karar ağaçları ile sınıflandırma yapılırken, bir veri kümesi giderek daha küçük alt kümelere ayrılarak karar ağacı kademeli olarak geliştirilir. Sonuç olarak elde edilen ağaç, karar düğümleri ve yaprak düğümlerinden oluşan bir karar ağacıdır. Oluşturulan karar ağacında bir karar düğümünün iki veya daha fazla sayıda elemanı vardır. Yaprak düğümler ise bir sınıfı veya kararı temsil eder. Karar ağacı ile sınıflandırma yapılırken, veri setinden elde edilen karar ağacının olabildiğince az sayıda düğümden oluşturulması hedeflenmektedir.
 
 
-![Örnek bir karar ağacı]({{ site.baseurl }}/assets/images/post/karar-agaci.jpg "The IT Crowd")*Örnek Bir Karar Ağacı*
+![Örnek bir karar ağacı]({{ site.baseurl }}/assets/images/post/karar-agaci.png "Örnek bir karar ağacı")*Örnek Bir Karar Ağacı*
 
 Karar ağacının oluşturulması için Quinlan tarafından ID3 olarak adlandırılan bir algoritma geliştirilmiştir. ID3 algoritması, karar ağacını oluşturmak için yukarıdan aşağıya, bir geri izleme olmadan açgözlü arama yaparak çalışır. ID3 algoritması ile karar ağacı oluşturulurken Entropi ve Bilgi Kazancı kullanılmaktadır [2].
 
@@ -27,6 +27,7 @@ Bir karar ağacı kök düğümden başlayarak yukarıdan aşağıya doğru olu�
 |---|---|
 |Evet|Hayır|
 |9|5|
+
 Tablo: Tek Özellik İçin Entropi Örneği
 
 Entropi(YuruyuseCik) = Entropy(5,9) = Entropy(0.36,0.64) = 0.94
@@ -35,13 +36,14 @@ Entropi(YuruyuseCik) = Entropy(5,9) = Entropy(0.36,0.64) = 0.94
 ![Denklem 2]({{ site.baseurl }}/assets/images/post/other/karar-agaci-denklem-2.png "Denklem 2")*Denklem 2*
 
 
-|Tahmin|Hava Durumu|Yürüyüşe Çık|Yürüyüşe Çık||
+|Tahmin|Hava Durumu|Yürüyüşe Çık|Yürüyüşe Çık|   |
 |---|---|---|---|---|
-|||Evet|Hayır||
-||Güneşli|3|2|5|
-||Bulutlu|4|0|4|
-||Yağmurlu|2|3|5|
-|||||14|
+|   ||Evet|Hayır||
+|   |Güneşli|3|2|5|
+|   |Bulutlu|4|0|4|
+|   |Yağmurlu|2|3|5|
+|   |   |   |   |14|
+
 Tablo: Tek Özellik İçin Entropi Örneği
 
 
