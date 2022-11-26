@@ -44,7 +44,7 @@ Entropi(YuruyuseCik) = Entropy(5,9) = Entropy(0.36,0.64) = 0.94
 |Yağmurlu|2|3|5|
 |   |   |   |14|
 
-Tablo: Tek Özellik İçin Entropi Örneği
+Tablo: İki Özellik İçin Entropi Örneği
 
 
 E(YuruyuseCik, Tahmin) = P(Güneşli) * E(3,2) + P(Bulutlu) * E(4,0) + P(Yağmurlu) * E(2,3) = 0.693
