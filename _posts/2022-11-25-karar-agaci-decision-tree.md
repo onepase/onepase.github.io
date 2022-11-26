@@ -36,13 +36,13 @@ Entropi(YuruyuseCik) = Entropy(5,9) = Entropy(0.36,0.64) = 0.94
 ![Denklem 2]({{ site.baseurl }}/assets/images/post/other/karar-agaci-denklem-2.png "Denklem 2")*Denklem 2*
 
 
-|Tahmin|Hava Durumu|Yürüyüşe Çık|Yürüyüşe Çık|   |
-|---|---|---|---|---|
-|   ||Evet|Hayır||
-|   |Güneşli|3|2|5|
-|   |Bulutlu|4|0|4|
-|   |Yağmurlu|2|3|5|
-|   |   |   |   |14|
+|Hava Durumu|Yürüyüşe Çık|Yürüyüşe Çık|   |
+|---|---|---|---|
+||Evet|Hayır||
+|Güneşli|3|2|5|
+|Bulutlu|4|0|4|
+|Yağmurlu|2|3|5|
+|   |   |   |14|
 
 Tablo: Tek Özellik İçin Entropi Örneği
 
